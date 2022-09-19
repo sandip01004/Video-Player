@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <link rel="icon" type="image/png" href="https://telegra.ph/file/48d6c5f6f1ba61d4de27d.png">
+        <link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css" />
+        <script "text/javascript" src="https://cdn.plyr.io/3.6.12/plyr.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Poppins|Quattrocento+Sans" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <title>{{ video_name }}</title>
+        <style type="text/css" media="screen">
+            html {
+                font-family: Poppins;
+            }
+            body{
+              
+              margin: 0;
+            }
+
+html{
+  background-color: #36384B;
+}
+nav{
+  height: 50px;
+  width: 100%;
+  background-color: #2F2F2F;
+  position: sticky;
+  top: 0px;
+}
+
+        </style>
+    </head>
+    <body>
+      
+<nav>
+  <img src="https://englishdidactics.cf/IMG/logo.png">
+</nav>
+        
+        <div id="player"
+        style="
+        margin: auto;
+        margin-top: 10px;
+        width:95%;
+        height:0px;
+        position:relative;
+        background-color: black;
+        padding-bottom:56.250%;">
+          <iframe allowfullscreen="true" frameborder="0" width="100%" height="100%"  style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;">
+            
+          </iframe></div>
+        <div class="logo-container">
+          
+        <!--   <div class="label-container">
+                <i class="fa fa-play label-arrow"></i>
+                <div class="label-text">Telegram</div>
+            </div>
+        </div> -->
+        <script>
+     
+		 setTimeout(videovisible, 5000)
+            function videovisible() {
+                            document.getElementById('loading').style.display = 'none'
+                        }
+                       /*
+			const controls = [
+              'play-large', // The large play button in the center
+              'play', // Play/pause playback
+              'progress', // The progress bar and scrubber for playback and buffering
+              'current-time', // The current time of playback
+              'duration', // The full duration of the media
+              'mute', // Toggle mute
+              'volume', // Volume control
+              'captions', // Toggle captions
+              'settings', // Settings menu
+              'pip', // Picture-in-picture (currently Safari only)
+              'airplay', // Airplay (currently Safari only)
+              'download', // Show a download button with a link to either the current source or a custom URL you specify in your options
+              'fullscreen' // Toggle fullscreen
+               ];
+            var defaultOptions = {
+			    controls,
+                "autoplay": false,
+                "muted": false,
+                "loop": {
+                    "active": false
+                },
+                "captions": {
+                    "active": true,
+                    "update": true
+                }
+            };
+            defaultOptions.tooltips = {controls: true, seek:true};
+            defaultOptions.quality = {
+                            default: "default"
+                        };
+                        --> */
+              <script>
+            const player = new Plyr("#player", defaultOptions);
+            player.source = {
+                            type: "video",
+                            title: "{{ video_name }}",
+                            sources: [
+                                                    {
+                                                        src: '{{ video_url }}',
+                                                        size: "default",
+                                                 }
+                                        ],
+            };
+        </script>
+    </body>
+</html>
